@@ -1,5 +1,5 @@
-import Vue, { ComponentOptions } from 'vue';
-import { AxiosInstance } from 'axios';
+import Vue, { ComponentOptions } from "vue";
+import { AxiosInstance } from "axios";
 
 export interface INuxtContext {
   app: {
@@ -11,7 +11,7 @@ export interface INuxtContext {
   req: any;
   error: ({
     message,
-    statusCode,
+    statusCode
   }: {
     message: string;
     statusCode: number;

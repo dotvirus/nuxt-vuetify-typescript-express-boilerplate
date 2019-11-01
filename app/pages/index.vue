@@ -1,41 +1,49 @@
   <template>
   <div>
-    <v-card class="mx-auto" max-width="344" outlined>
-      <v-list-item three-line>
-        <v-list-item-content>
-          <div class="overline mb-4">Hello World</div>
-          <v-list-item-title class="headline mb-1">{{ hello }}</v-list-item-title>
-          <v-list-item-subtitle>This is an example card</v-list-item-subtitle>
-        </v-list-item-content>
+    <v-row>
+      <v-col col="6">
+        <WelcomeCard :title="hello" />
+      </v-col>
+      <v-col col="6">
+        <WelcomeCard :title="'Another card'" />
+      </v-col>
+    </v-row>
 
-        <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
-      </v-list-item>
-
-      <v-card-text>Counter (in Vuex store): {{ exampleStore.counter }}</v-card-text>
-
-      <v-card-actions>
-        <v-btn text @click="exampleStore.increment">Increment</v-btn>
-      </v-card-actions>
-    </v-card>
+    <div class="py-5 text-center">
+      <p class="display-4">Light 96sp</p>
+      <p class="display-3">Light 60sp</p>
+      <p class="display-2">Regular 48sp</p>
+      <p class="display-1">Regular 34sp</p>
+      <p class="headline">Regular 24sp</p>
+      <p class="title">Medium 20sp</p>
+      <p class="subtitle-1">Regular 16sp</p>
+      <p class="subtitle-2">Medium 14sp</p>
+      <p class="body-1">Regular 16sp</p>
+      <p class="body-2">Regular 14sp</p>
+      <p class="caption">Regular 12sp</p>
+      <p class="overline">Regular 10sp</p>
+    </div>
 
     <div class="text-center mt-3">
-      <v-btn :loading="fetchLoader" @click="fetchMore" class="mb-3">Fetch more</v-btn>
+      <v-btn color="primary" :loading="fetchLoader" @click="fetchMore" class="mb-3">Fetch more</v-btn>
       <p v-for="(item, i) in list" :key="i">{{ i }}. {{ item }}</p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
-import { ExampleStore } from '~/store/example';
-import { INuxtContext } from 'nuxt';
-import Axios from 'axios';
+import { Component, Vue } from "nuxt-property-decorator";
+import { ExampleStore } from "~/store/example";
+import { INuxtContext } from "nuxt";
+import Axios from "axios";
+import WelcomeCard from "~/components/welcome_card.vue";
 
-@Component({})
+@Component({
+  components: {
+    WelcomeCard
+  }
+})
 export default class App extends Vue {
-  exampleStore = ExampleStore.CreateProxy(this.$store, ExampleStore);
-  hello = '';
-
   list = [] as string[];
   fetchLoader = false;
 
@@ -43,22 +51,20 @@ export default class App extends Vue {
     this.fetchLoader = true;
     try {
       // TODO: this.$axios
-      const result = (await Axios.get('http://localhost:3000/api')).data;
+      const result = (await Axios.get("http://localhost:3000/api")).data;
       setTimeout(() => {
         this.list.push(result);
         this.fetchLoader = false;
-      }, 2000);
+      }, 1000);
     } catch (err) {
       this.fetchLoader = false;
     }
   }
 
   async asyncData(context: INuxtContext) {
-    const data = {} as any;
-
-    data.hello = (await context.$axios.get('http://localhost:3000/api')).data;
-
-    return data;
+    return {
+      hello: (await context.$axios.get("http://localhost:3000/api")).data
+    };
   }
 }
 </script>
