@@ -53,8 +53,6 @@ export default class App extends Vue {
   list = [] as string[];
   fetchLoader = false;
 
-  banner = false;
-
   async fetchMore() {
     this.fetchLoader = true;
     try {
