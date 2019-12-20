@@ -1,4 +1,4 @@
-  <template>
+<template>
   <div>
     <v-row>
       <v-col col="6">
@@ -25,7 +25,13 @@
     </div>
 
     <div class="text-center mt-3">
-      <v-btn color="primary" :loading="fetchLoader" @click="fetchMore" class="mb-3">Fetch more</v-btn>
+      <v-btn
+        color="primary"
+        :loading="fetchLoader"
+        @click="fetchMore"
+        class="mb-3"
+        >Fetch more</v-btn
+      >
       <p v-for="(item, i) in list" :key="i">{{ i }}. {{ item }}</p>
     </div>
   </div>
@@ -46,6 +52,8 @@ import WelcomeCard from "~/components/welcome_card.vue";
 export default class App extends Vue {
   list = [] as string[];
   fetchLoader = false;
+
+  banner = false;
 
   async fetchMore() {
     this.fetchLoader = true;

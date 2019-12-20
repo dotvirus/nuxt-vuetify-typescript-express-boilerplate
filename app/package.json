@@ -7,20 +7,19 @@
     "generate": "nuxt-ts generate"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.2.2",
-    "@nuxtjs/axios": "^5.8.0",
+    "@nuxt/typescript-runtime": "^0.3.2",
+    "@nuxtjs/axios": "^5.9.0",
     "express": "^4.17.1",
     "nuxt": "^2.10.2",
     "nuxt-property-decorator": "^2.5.0",
-    "vuetify": "^2.1.9",
-    "vuex-class-component": "^2.0.4"
+    "vuex-class-component": "^2.2.1"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.3.2",
-    "@nuxtjs/vuetify": "^1.9.0",
-    "@types/node": "^11.9.5",
-    "@types/webpack-env": "^1.13.9",
-    "typescript": "^3.6.3"
+    "@nuxt/typescript-build": "^0.5.1",
+    "@nuxtjs/vuetify": "^1.9.1",
+    "@types/node": "^12.12.17",
+    "@types/webpack-env": "^1.14.1",
+    "typescript": "^3.7.3"
   },
   "browserslist": [
     "> 1%"
