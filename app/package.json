@@ -8,18 +8,18 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.3.2",
-    "@nuxtjs/axios": "^5.9.0",
+    "@nuxtjs/axios": "^5.9.3",
     "express": "^4.17.1",
-    "nuxt": "^2.10.2",
+    "nuxt": "^2.11.0",
     "nuxt-property-decorator": "^2.5.0",
     "vuex-class-component": "^2.2.1"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.5.1",
+    "@nuxt/typescript-build": "^0.5.6",
     "@nuxtjs/vuetify": "^1.9.1",
-    "@types/node": "^12.12.17",
-    "@types/webpack-env": "^1.14.1",
-    "typescript": "^3.7.3"
+    "@types/node": "^12.12.24",
+    "@types/webpack-env": "^1.15.0",
+    "typescript": "^3.7.4"
   },
   "browserslist": [
     "> 1%"
