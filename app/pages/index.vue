@@ -9,20 +9,29 @@
       </v-col>
     </v-row>
 
-    <div class="py-5 text-center">
-      <p class="display-4">Light 96sp</p>
-      <p class="display-3">Light 60sp</p>
-      <p class="display-2">Regular 48sp</p>
-      <p class="display-1">Regular 34sp</p>
-      <p class="headline">Regular 24sp</p>
-      <p class="title">Medium 20sp</p>
-      <p class="subtitle-1">Regular 16sp</p>
-      <p class="subtitle-2">Medium 14sp</p>
-      <p class="body-1">Regular 16sp</p>
-      <p class="body-2">Regular 14sp</p>
-      <p class="caption">Regular 12sp</p>
-      <p class="overline">Regular 10sp</p>
+    <div class="text-center my-3">
+      <v-btn @click="$vuetify.theme.dark = !$vuetify.theme.dark"
+        >Toggle theme</v-btn
+      >
     </div>
+
+    <client-only>
+      <div class="text-center">Rendered client only:</div>
+      <div class="py-5 text-center">
+        <p class="display-4">Light 96sp</p>
+        <p class="display-3">Light 60sp</p>
+        <p class="display-2">Regular 48sp</p>
+        <p class="display-1">Regular 34sp</p>
+        <p class="headline">Regular 24sp</p>
+        <p class="title">Medium 20sp</p>
+        <p class="subtitle-1">Regular 16sp</p>
+        <p class="subtitle-2">Medium 14sp</p>
+        <p class="body-1">Regular 16sp</p>
+        <p class="body-2">Regular 14sp</p>
+        <p class="caption">Regular 12sp</p>
+        <p class="overline">Regular 10sp</p>
+      </div>
+    </client-only>
 
     <div class="text-center mt-3">
       <v-btn
