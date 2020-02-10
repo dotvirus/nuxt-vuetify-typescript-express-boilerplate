@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.3.8",
-    "@nuxtjs/axios": "^5.9.3",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "nuxt": "^2.11.0",
     "nuxt-property-decorator": "^2.5.0",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.5.6",
-    "@nuxtjs/vuetify": "^1.10.2",
+    "@nuxtjs/vuetify": "^1.10.3",
     "@types/node": "^12.12.25",
     "@types/webpack-env": "^1.15.0",
     "typescript": "^3.7.5"

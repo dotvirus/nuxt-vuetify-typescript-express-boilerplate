@@ -43,12 +43,7 @@ const config: Configuration = {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/axios"],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
+  modules: [],
   /*
    ** Plugins to load before mounting the App
    */

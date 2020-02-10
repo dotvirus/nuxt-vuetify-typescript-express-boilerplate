@@ -4,9 +4,7 @@ import { AxiosInstance } from "axios";
 export interface INuxtContext {
   app: {
     store: any;
-    $axios: AxiosInstance;
   };
-  $axios: AxiosInstance;
   params: { [key: string]: string };
   req: any;
   error: ({

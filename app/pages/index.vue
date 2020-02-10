@@ -78,7 +78,7 @@ export default class App extends Vue {
 
   async asyncData(context: INuxtContext) {
     return {
-      hello: (await context.$axios.get("http://localhost:3000/api")).data
+      hello: (await Axios.get("http://localhost:3000/api")).data
     };
   }
 }
